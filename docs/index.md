@@ -1,6 +1,3 @@
-## Welcome to Pet-Lab
-
-
 <img src="Title.png" alt="hi" class="inline"/>
 ### Motivation (Needs of targetbase)
 
