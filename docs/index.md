@@ -1,14 +1,16 @@
 <img src="Title_1.png" alt="hi" class="inline"/>
 ### Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
-- 
-- 
+Pet-Lab will:
+- Use a nueral network to identify the flower.
+- Search database to provide user with toxicity information (severity, common symptoms) as well as flower description to aide in detection confirmation.
 
 ```markdown
 Syntax highlighted code block
 
 # Clear purpose - meaningful impact
 ## How unique/different: what benefits does it offer?
+<$\gamma$>
 
 while other apps exist on the market that identify flowers, they dont have any information abiout animal toxicity.
 
