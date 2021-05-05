@@ -8,13 +8,15 @@ Pet-Lab will:
 
 ## Existing products and gap in the Market
 
-<img src="plantsnap.PNG" alt="hi" class="inline"/>
+|<img src="plantsnap.PNG" alt="hi" class="inline"/>      | <img src="apcc.PNG" alt="hi" class="inline"/>        |
+| -------------- | -------------- |
+| PlantSnap identifies 90% of plants and flowers in the world, however they lack information about toxicity.  | APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
-PlantSnap identifies 90% of plants and flowers in the world, however they lack information about toxicity.
 
-<img src="apcc.PNG" alt="hi" class="inline"/>  
 
-APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities. 
+
+
+
 
 Some of the most common complaints about APCC are as follows:
 - Poor pictures of plants/ dont know what plants I have are called
