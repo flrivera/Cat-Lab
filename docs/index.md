@@ -29,10 +29,9 @@ Pet-Lab will:
 - Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
 
 ## Explaratory Data Analysis
-### Counts per label
  
  <p align="center">
-      <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+  <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
  </p>
  
  <p align="middle">
