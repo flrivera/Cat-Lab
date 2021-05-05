@@ -14,10 +14,6 @@ Pet-Lab will:
 
 
 
-
-
-
-
 **Some of the most common complaints about APCC are as follows:**
 - Poor pictures of plants/ dont know what plants I have are called
 - Listings by common not latin names
@@ -31,7 +27,7 @@ Pet-Lab will:
 ## Explaratory Data Analysis
  
  <p align="center">
-  <img width="500" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+  <img width="25%" height="20%"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
  </p>
  
  <p align="middle">
