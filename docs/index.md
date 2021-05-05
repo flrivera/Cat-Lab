@@ -1,5 +1,5 @@
 <img src="Title_1.png" alt="hi" class="inline"/>
-### Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
+## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
 Pet-Lab will:
 - Use a nueral network to identify the flower.
@@ -31,7 +31,7 @@ Pet-Lab will:
 ## Explaratory Data Analysis
  
  <p align="center">
-  <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+  <img width="500" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
  </p>
  
  <p align="middle">
