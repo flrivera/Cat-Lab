@@ -18,7 +18,7 @@ Pet-Lab will:
 
 
 
-Some of the most common complaints about APCC are as follows:
+**Some of the most common complaints about APCC are as follows:**
 - Poor pictures of plants/ dont know what plants I have are called
 - Listings by common not latin names
 - Doesnt say how much would be toxic
@@ -29,8 +29,10 @@ Some of the most common complaints about APCC are as follows:
 - Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
 
 ### progress, Goals, and check points
-
- <img src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+ 
+ <p align="center">
+ <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+ </p>
  
  <p align="middle">
   <img src="Averages.png" width="40%" />
