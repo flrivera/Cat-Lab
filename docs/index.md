@@ -28,7 +28,13 @@ Some of the most common complaints about APCC are as follows:
 
 ### progress, Goals, and check points
 
-<img src="Contrast.png" alt="hi" class="inline"/>
+ <img src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+ 
+ <p align="middle">
+  <img src="Averages.png" width="40%" />
+  <img src="contrast_small.png" width="40%" /> 
+</p>
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
