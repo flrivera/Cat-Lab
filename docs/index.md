@@ -27,7 +27,7 @@ Pet-Lab will:
 ## Explaratory Data Analysis
  
  <p align="center">
-  <img width="25%" src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+  <img width="25%" height="50%" src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
  </p>
  
  <p align="middle">
