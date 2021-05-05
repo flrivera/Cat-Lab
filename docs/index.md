@@ -1,9 +1,9 @@
-## Welcome to GitHub Pages
+## Welcome to Pet-Lab
 
 You can use the [editor on GitHub](https://github.com/flrivera/Pet-Lab/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
+<img src="Title.png" alt="hi" class="inline"/>
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
