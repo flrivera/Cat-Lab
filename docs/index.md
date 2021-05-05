@@ -1,4 +1,4 @@
-<img src="Title.png" alt="hi" class="inline"/>
+<img src="Title_1.png" alt="hi" class="inline"/>
 ### Motivation (Needs of targetbase)
 
 - **Provide a fast and reliable method for flower recognition**
