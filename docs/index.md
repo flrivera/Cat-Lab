@@ -31,8 +31,8 @@ Pet-Lab will:
  </p>
  
  <p align="middle">
-  <img src="Averages.png" width="100%" />
-  <img src="contrast_small.png" width="100%" /> 
+  <img src="Averages.png" width="200%" />
+  <img src="contrast_small.png" width="200%" /> 
 </p>
 
 
