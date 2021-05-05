@@ -28,10 +28,11 @@ Pet-Lab will:
 - “Much to exact. Recognizes almond but not almonds. Does not recognize anything    with a trailing space.
 - Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
 
-### progress, Goals, and check points
+## Explaratory Data Analysis
+### Counts per label
  
  <p align="center">
- <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
+      <img width="1000" height="500"  src="Explaratory_Analysis_1.png" alt="hi" class="inline"/>
  </p>
  
  <p align="middle">
@@ -44,7 +45,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 
 
-
+### progress, Goals, and check points
 
 ### Support or Contact
 
