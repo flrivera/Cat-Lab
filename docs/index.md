@@ -25,11 +25,15 @@ Pet-Lab will:
 - Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
 
 ## Explaratory Data Analysis
- 
+
+### Counts per label
  <p align="center">
   <img src="Explaratory_Analysis_1.png" />
  </p>
  
+We can see from the two peaks in counts, one for roses (label 73) and one for dandelions (label 49), that we are working with some class balance issues.
+ 
+### Average images of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
  <p align="middle">
   <img src="Averages.png" width="200%" />
   <img src="contrast_small.png" width="200%" /> 
