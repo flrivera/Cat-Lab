@@ -43,15 +43,15 @@ Pet-Lab will:
 
 ### Getting features of the 5 most common classes
 
-
+<p float="middle">
   <img src="pairplot.png" width="60%"  height="400"/>
-
+</p>
  
 
 #### Fitting and making predictions
-
-      <img src="SVC_linear.png" width="60%" height="400"/>
-
+<p float="middle">
+  <img src="SVC_linear.png" width="60%" height="400"/>
+</p>
 
 kNN(k=3) accuracy is : 0.87
 
