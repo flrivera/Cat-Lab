@@ -24,6 +24,12 @@ Pet-Lab will:
 - “Much to exact. Recognizes almond but not almonds. Does not recognize anything    with a trailing space.
 - Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
 
+
+## Target Goals
+
+<img src="Slide1.jpg" />
+
+
 ## Explaratory Data Analysis
 
 ### Average images, Contrast of Images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
@@ -32,12 +38,15 @@ Pet-Lab will:
  <p float="left">
   <img src="Averages.png" width="33%"  height="250"/>
   <img src="contrast_small.png" width="33%" height="250" /> 
-  <img src="dandelion_Eigenstate.pdf" width="33%" height="250"/>
+  <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
 </p>
 
+### Getting features of the 5 most common classes
 
-## Target Goals
-
-<img src="Slide1.jpg" />
+ <p float="left">
+  <img src="pairplot.png" width="33%"  height="250"/>
+  <img src="violinplot.png" width="33%" height="250" /> 
+  <img src="SVC-linear.png" width="33%" height="250"/>
+</p>
 
 
