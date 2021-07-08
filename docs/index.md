@@ -27,11 +27,18 @@ Pet-Lab will:
 ## Explaratory Data Analysis
 
 ### Average images of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
- <p align="middle">
-  <img src="Averages.png" width="100%" />
-  <img src="contrast_small.png" width="100%" /> 
-</p>
 
+<div class="row">
+  <div class="column">
+    <img src="Averages.png" alt="Snow" style="width:50%">
+  </div>
+  <div class="column">
+    <img src="contrast_small.png" alt="Forest" style="width:30%">
+  </div>
+  <div class="column">
+    <img src="contrast_small.png" alt="Mountains" style="width:10%">
+  </div>
+</div>
 
 
 ## Target Goals
