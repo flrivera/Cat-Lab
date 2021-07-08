@@ -43,10 +43,18 @@ Pet-Lab will:
 
 ### Getting features of the 5 most common classes
 
- <p float="left">
-  <img src="pairplot.png" width="33%"  height="250"/>
-  <img src="violinplot.png" width="33%" height="250" /> 
-  <img src="SVC-linear.png" width="33%" height="250"/>
-</p>
 
+  <img src="pairplot.png" width="60%"  height="400"/>
+  <img src="violinplot.png" width="60%" height="400" />
+  <img src="SVC_linear.png" width="60%" height="400"/>
+
+#### Fitting and making predictions
+
+kNN(k=3) accuracy is : 0.87
+
+NB accuracy: 0.91
+
+dtree accuracy: 0.91
+
+Random Forrest accuracy: 0.91
 
