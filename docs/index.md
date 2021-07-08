@@ -2,15 +2,15 @@
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
 Pet-Lab will:
-- Use a nueral network to identify the flower.
+- Identify the flower type depending on unique charasteristics.
 - Search database to provide user with toxicity information (severity, common symptoms) as well as flower description to aide in detection confirmation.
 
 
 ## Existing products and gap in the Market
 
-|<img src="plantsnap.PNG" alt="hi" class="inline"/>      | <img src="apcc.PNG" alt="hi" class="inline"/>        |
-| -------------- | -------------- |
-| PlantSnap identifies 90% of plants and flowers in the world, however they lack information about toxicity.  | APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
+| <img src="apcc.PNG" alt="hi" class="inline"/>        |
+| -------------- |
+| APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
 
@@ -43,12 +43,15 @@ Pet-Lab will:
 
 ### Getting features of the 5 most common classes
 
-
+<p float="center">
   <img src="pairplot.png" width="60%"  height="400"/>
-  <img src="violinplot.png" width="60%" height="400" />
-  <img src="SVC_linear.png" width="60%" height="400"/>
+</p>
+ 
 
 #### Fitting and making predictions
+<p float="center">
+      <img src="SVC_linear.png" width="60%" height="400"/>
+</p>
 
 kNN(k=3) accuracy is : 0.87
 
