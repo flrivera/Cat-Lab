@@ -13,18 +13,6 @@ Pet-Lab will:
 | APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
-
-**Some of the most common complaints about APCC are as follows:**
-- Poor pictures of plants/ dont know what plants I have are called
-- Listings by common not latin names
-- Doesnt say how much would be toxic
-- The contact number to poison control charges a fee.
-- Small amount of plants and hasn't been updated since 2015.
-- Doesn/t have flowers commonly used in essential oils.
-- “Much to exact. Recognizes almond but not almonds. Does not recognize anything    with a trailing space.
-- Weeds,  You have plants but nothing about weeds which dogs are more likely to eat.
-
-
 ## Target Goals
 
 <img src="Slide1.jpg" />
@@ -53,11 +41,11 @@ Pet-Lab will:
   <img src="SVC_linear.png" width="60%" height="400"/>
 </p>
 
-kNN(k=3) accuracy is : 0.87
+#kNN(k=3) accuracy is : 0.87
 
-NB accuracy: 0.91
+#NB accuracy: 0.91
 
-dtree accuracy: 0.91
+#dtree accuracy: 0.91
 
-Random Forrest accuracy: 0.91
+#Random Forrest accuracy: 0.91
 
