@@ -29,23 +29,10 @@ Pet-Lab will:
   <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
 </p>
 
-### Getting features of the 5 most common classes
-
-<p float="middle">
-  <img src="pairplot.png" width="60%"  height="400"/>
-</p>
- 
 
 #### Fitting and making predictions
 <p float="middle">
   <img src="SVC_linear.png" width="60%" height="400"/>
 </p>
 
-#kNN(k=3) accuracy is : 0.87
-
-#NB accuracy: 0.91
-
-#dtree accuracy: 0.91
-
-#Random Forrest accuracy: 0.91
 
