@@ -13,12 +13,7 @@ Pet-Lab will:
 | APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
-## Target Goals
-
-<img src="Slide1.jpg" />
-
-
-## Explaratory Data Analysis
+## How to tell plants and flowers apart?
 
 ### Average images, Contrast of Images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
 
@@ -34,5 +29,8 @@ Pet-Lab will:
 <p float="middle">
   <img src="SVC_linear.png" width="60%" height="400"/>
 </p>
+
+# Current and Future Developments
+<img src="Presentation 3.jpg" />
 
 
