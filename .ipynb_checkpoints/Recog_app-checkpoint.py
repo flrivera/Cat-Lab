@@ -21,7 +21,7 @@ load_dotenv() # load my enviornment variables
 API_key=os.getenv('API_key')
 
 
-st.title('TDI-Milestone')
+st.title('TDI-Capstone')
 
 outputsize='full'
 
