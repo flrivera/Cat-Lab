@@ -26,10 +26,10 @@ st.title('TDI-Milestone')
 outputsize='full'
 
 
-st.sidebar.header("Configuration")
+st.sidebar.header("Image Classification")
 
-
-ticker = st.sidebar.text_input('Stock-Ticker') # make selectbox with time 
+fileUpload = st.file_uploader("Choose a file", type = ['jpg', 'png'])
+#ticker = st.sidebar.text_input('Image') # make selectbox with time 
 
 
 
