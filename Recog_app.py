@@ -1,19 +1,28 @@
+import os
+from natsort import natsorted, ns
+from skimage import io
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.preprocessing import image
+from tempfile import NamedTemporaryFile
 import requests
 import json 
+import pickle
 import streamlit as st
 import datetime as dt
-from alpha_vantage.timeseries import TimeSeries
 import matplotlib.pyplot as plt
 import altair as alt
 import pandas as pd
 import numpy as np
 import os
-from Month_dict import month_dict
+import toxicity as toxic
+
 from dotenv import load_dotenv
 from urllib.error import URLError
 import SessionState
 
-
+from io import BytesIO
 state = SessionState.get(chat_list=[])
 
 load_dotenv() # load my enviornment variables
@@ -23,89 +32,156 @@ API_key=os.getenv('API_key')
 
 st.title('TDI-Capstone')
 
-outputsize='full'
 
+
+#upload user Image
 
 st.sidebar.header("Image Classification")
 
-fileUpload = st.file_uploader("Choose a file", type = ['jpg', 'png'])
-#ticker = st.sidebar.text_input('Image') # make selectbox with time 
+st.set_option('deprecation.showfileUploaderEncoding', False)
+fileUpload = st.file_uploader("Choose a file (jpg or png only)", accept_multiple_files=False,type = ['jpg', 'png','JFIF'])
+
+
+temp_file = NamedTemporaryFile(delete=False)
 
 
 
-Year = st.sidebar.selectbox('What year would you like data for?',options=year_options)
+#Reformat Image
 
-if Year==2021:
+def img2np( filename, size = (64, 64)):
+    # iterating through each file
+    #st.write(list_of_filename)
+
+    current_image = image.load_img(filename, target_size = size,color_mode = 'grayscale')
+    # covert image to a matrix
+    img_ts = image.img_to_array(current_image)
+    #st.write(img_ts)
+    # turn that into a vector / 1D array
+    img_ts = [img_ts.ravel()]
+    try:
+      #  st.write(hi)
+        # concatenate different images
+        full_mat = np.concatenate((full_mat, img_ts))
+
+    except UnboundLocalError: 
+        #st.write(hi)
+        # if not assigned yet, assign one
+        full_mat = img_ts
+       
+
+    return full_mat
+
+
+#Get feature of image
+
+def find_mean_img(full_mat,size = (64, 64)):
+    mean_img = np.mean(full_mat, axis = 0)
+
+    mean_img = mean_img.reshape(size)
+
+    return mean_img
+
+
+
+
+def find_std_img(full_mat,size = (64, 64)):
+    # calculate the average
+    std_img = np.std(full_mat, axis = 0)
+    # reshape it back to a matrix
+    std_img = std_img.reshape(size)
+
+    return std_img
+
+
+
+#run feature code
+
+
+if fileUpload is not None:
+    #st.write('hi')
+
+    temp_file.write(fileUpload.getvalue())
+
+
+    full_mat_upload=img2np(temp_file.name, size = (64, 64))
+    mean_upload=find_mean_img(full_mat_upload)
+    std_upload=find_std_img(full_mat_upload)
     
-   
-    month_options=['January','February','March','April','May','June']
+#flatten upload_features
 
-    Month = st.sidebar.selectbox(f'What month would you like data for?',options=month_options)
-else:
+#&
+
+# make feature dataframe.
+
+upload_feature_dataframe=pd.DataFrame(columns = ['mean','std'])
+upload_feature_dataframe['mean']=mean_upload.flatten()
+upload_feature_dataframe['std']=std_upload.flatten()
+
+#st.write(upload_feature_dataframe)
+
+#upload ML_Model:
+filename='5_flowers_knn.sav'
+Loaded_model_1=loaded_model = pickle.load(open(filename, 'rb'))
+
+
+
+
+st.write("Classifying...")
+
+#
+
+#plot feature sns   overlay   upload values
+
+
+#
+Predictions=Loaded_model_1.predict_proba(upload_feature_dataframe)
+
+Classification=pd.DataFrame(Predictions,columns= [f'{el}' for el in Loaded_model_1.classes_])
+
+#st.write('Prob Daisy:',Classification['daisy'].mean())
+Probabilities=[Classification['daisy'].mean(),Classification['dandelion'].mean(),Classification['rose'].mean(),Classification['sunflower'].mean(),Classification['tulip'].mean()]
+
+
+Flowers_to_Scrape=[]
+for i in range(0,len(Probabilities)):
+
+    if Probabilities[i]>0:
+        Flowers_to_Scrape.append(Loaded_model_1.classes_[i])
+        st.write(f'Prob {Loaded_model_1.classes_[i]}',Probabilities[i])
+
+
+
+# Pull Rover info! if prob > 0
+
+
+    #pull rover info
     
-
-
-    month_options=['January','February','March','April','May','June','July','August',
-               'September','October','November','December']
-
-    Month = st.sidebar.selectbox(f'What month would you like data for?',options=month_options)
-
-Month_index=month_dict[f'{Month}']
-
-
-if st.sidebar.button("Post Stock Info"):
-    state.chat_list.append((ticker, Year, Month))
     
+st.write("Scrapping Rover...")
+
+st.write()
+
+pd.set_option('display.max_colwidth', 0)
+
+Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
+
+Toxic_info.style.set_properties(subset=['Toxicity'], **{'width': '1000px'})
+Toxic_info.style.set_properties(subset=['URL'], **{'width': '200px'})
+st.dataframe(Toxic_info,2000,600)
+
+
+
+
+
+
+
+
+
+
+#st.write(Classification)    
 if len(state.chat_list) > 10:
     del (state.chat_list[0])
 
     
-try:
-    ticker,Year,Month = zip(*state.chat_list)
-    
-    ts=TimeSeries(f'{API_key}',output_format='pandas')
-    
-    try:
-
-        aapl,metadata=ts.get_daily_adjusted(symbol=ticker,outputsize=outputsize)
-        aapl2,metadata2=ts.get_daily(symbol=ticker,outputsize=outputsize)
-    except ValueError:
-        
-        st.title("Incorrect Stock Ticker") 
-    
-    include=aapl[aapl.index.year==Year]
-    iinclude=aapl2[aapl2.index.year==Year]
-
-    include2=include[include.index.month==Month_index]
-    iinclude2=iinclude[iinclude.index.month==Month_index]
-
-    A=include2['4. close'].astype(float)
-    B=iinclude2['4. close'].astype(float)
-
-    A=pd.DataFrame(A)
-
-    jo=np.array(A['4. close'])
-
-    A['Date']=(A.index.day).astype(float)
-
-    jo_x=np.array(A['Date'])
 
 
-    B=pd.DataFrame(B)
-
-    B['Date']=(B.index.day).astype(float)
-
-
-    source = pd.DataFrame({
-      'Day': jo_x,
-      'Closing Value USD': jo
-    })
-
-
-
-
-    st.write(alt.Chart(source,title=f'{str(ticker[0])} daily closing values USD for {str(Month[0])} of {str(Year[0])}').mark_line(point=True).encode(
-        alt.Y('Closing Value USD', scale=alt.Scale(zero=False)), x='Day'))
-    
-except ValueError:
-    st.title("Enter the Stock , Year, and Month you want to be shown, then click post!")    
