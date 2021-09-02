@@ -17,10 +17,11 @@ import pandas as pd
 import numpy as np
 import os
 import toxicity as toxic
-
+from PIL import Image
 from dotenv import load_dotenv
 from urllib.error import URLError
 import SessionState
+
 
 from io import BytesIO
 state = SessionState.get(chat_list=[])
@@ -29,17 +30,18 @@ load_dotenv() # load my enviornment variables
 
 API_key=os.getenv('API_key')
 
-
+st.title('Freida Rivera')
 st.title('TDI-Capstone')
 
 
 
 #upload user Image
 
-st.sidebar.header("Image Classification")
+#st.sidebar.header("Image Classification")
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 fileUpload = st.file_uploader("Choose a file (jpg or png only)", accept_multiple_files=False,type = ['jpg', 'png','JFIF'])
+
 
 
 temp_file = NamedTemporaryFile(delete=False)
@@ -99,7 +101,10 @@ def find_std_img(full_mat,size = (64, 64)):
 
 if fileUpload is not None:
     #st.write('hi')
-
+    image1 = Image.open(fileUpload)
+    st.image(image1, caption='Uploaded Image.', width=None)
+    st.write("")
+    
     temp_file.write(fileUpload.getvalue())
 
 
@@ -126,13 +131,7 @@ Loaded_model_1=loaded_model = pickle.load(open(filename, 'rb'))
 
 
 
-st.write("Classifying...")
-
-#
-
-#plot feature sns   overlay   upload values
-
-
+st.title("Classifications")
 #
 Predictions=Loaded_model_1.predict_proba(upload_feature_dataframe)
 
@@ -157,7 +156,7 @@ for i in range(0,len(Probabilities)):
     #pull rover info
     
     
-st.write("Scrapping Rover...")
+st.title("Toxicity Information")
 
 st.write()
 
@@ -167,14 +166,31 @@ Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
 
 Toxic_info.style.set_properties(subset=['Toxicity'], **{'width': '1000px'})
 Toxic_info.style.set_properties(subset=['URL'], **{'width': '200px'})
-st.dataframe(Toxic_info,2000,600)
+
+st.write('For Class in substring of Flower')
+
+st.dataframe(Toxic_info)
 
 
+Toxic_info2=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape,total_equality=True))
+
+st.write('For Class exactly equal to Flower')
+st.dataframe(Toxic_info2)
 
 
+with st.beta_expander("Under the Hood"):
+    
+    st.title("Features")
+#
 
-
-
+    
+    Image_scatter=Image.open("pairplot.png")
+    st.image(Image_scatter)
+    Image_violin=Image.open('violinplot.png')
+#st.write(scatter)
+    st.image(Image_violin)
+#plot feature sns  st.write(scatter) overlay   upload values
+     
 
 
 
