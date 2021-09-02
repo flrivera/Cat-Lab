@@ -187,7 +187,6 @@ Twisted==18.9.0
 typer==0.3.2
 typing-extensions==3.7.4.3
 tzlocal==2.1
-ubuntu-advantage-tools==20.3
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8

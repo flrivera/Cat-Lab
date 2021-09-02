@@ -24,7 +24,7 @@ import requests
 import pandas as pd
 
 
-nlp = en_core_web_sm.load()
+#nlp = en_core_web_sm.load()
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
