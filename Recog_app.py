@@ -12,7 +12,6 @@ import pickle
 import streamlit as st
 import datetime as dt
 import matplotlib.pyplot as plt
-import altair as alt
 import pandas as pd
 import numpy as np
 import os
@@ -20,7 +19,6 @@ import toxicity as toxic
 from PIL import Image
 from dotenv import load_dotenv
 from urllib.error import URLError
-import SessionState
 
 
 from io import BytesIO
@@ -195,10 +193,5 @@ with st.beta_expander("Under the Hood"):
 
 
 
-#st.write(Classification)    
-if len(state.chat_list) > 10:
-    del (state.chat_list[0])
-
-    
 
 
