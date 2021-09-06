@@ -22,7 +22,7 @@ from urllib.error import URLError
 
 
 from io import BytesIO
-state = SessionState.get(chat_list=[])
+
 
 load_dotenv() # load my enviornment variables
 
