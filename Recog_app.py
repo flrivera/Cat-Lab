@@ -34,6 +34,7 @@ st.title('Freida Rivera')
 st.title('TDI-Capstone')
 
 
+st.title('Pet-Lab: Keep your pets safe! Upload a picture and obtain a flowers toxicity information with the click of a button.')
 
 #upload user Image
 
