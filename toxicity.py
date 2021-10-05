@@ -11,7 +11,6 @@ import itertools
 from collections import defaultdict
 from urllib.request import urlopen
 import spacy
-import nltk
 import requests
 from spacy import displacy
 from collections import Counter
