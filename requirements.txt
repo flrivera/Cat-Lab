@@ -6,9 +6,6 @@ Tensorflow-cpu==2.6.0
 beautifulsoup4==4.6.3
 bleach==3.3.0
 bs4==0.0.1
-cachetools==4.2.1
-certifi==2019.11.28cffi==1.14.5
-chardet==3.0.4
 cmd2==1.5.0
 configobj==5.0.6
 configparser==5.0.2
@@ -119,9 +116,4 @@ w3lib==1.22.0
 wadllib==1.3.3
 webencodings==0.5.1
 websockets==8.1
-Werkzeug==2.0.0
-rc4widgetsnbextension==3.5.1
-wrapt==1.12.1
-yarl==1.6.3
-zipp==1.0.0
-zope.interface==4.7.1
+
