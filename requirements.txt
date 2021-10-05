@@ -1,6 +1,6 @@
 pip==21.2.4
 absl-py==0.12.0
-aiohttp==3.7.4.
+aiohttp==3.7.4
 appdirs==1.4.4
 Tensorflow-cpu==2.6.0
 beautifulsoup4==4.6.3
@@ -34,7 +34,7 @@ lxml==4.6.3
 Markdown==3.3.4
 MarkupSafe==2.0.1
 matplotlib==3.4.1
-pkg-config==1.5.5
+pkgconfig==1.5.5
 mistune==0.8.4
 more-itertools==4.2.0
 mpmath==1.2.1
