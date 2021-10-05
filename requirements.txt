@@ -34,7 +34,7 @@ lxml==4.6.3
 Markdown==3.3.4
 MarkupSafe==2.0.0rc2
 matplotlib==3.4.1
-pkf-config==1.5.5
+pkg-config==1.5.5
 mistune==0.8.4
 more-itertools==4.2.0
 mpmath==1.2.1
