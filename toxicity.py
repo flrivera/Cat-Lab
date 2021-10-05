@@ -14,7 +14,6 @@ import spacy
 import requests
 from spacy import displacy
 from collections import Counter
-import en_core_web_sm
 from requests_futures.sessions import FuturesSession
 from collections import deque
 from ediblepickle import checkpoint
