@@ -113,7 +113,6 @@ ssh-import-id==5.10
 statsmodels==0.12.2
 stevedore==3.3.0
 streamlit==0.83.0
-systemd-python==234
 termcolor==1.1.0
 terminado==0.9.4
 testpath==0.4.4
