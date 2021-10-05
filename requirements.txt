@@ -111,7 +111,7 @@ spacy-legacy==3.0.8
 srsly==2.4.1
 ssh-import-id==5.10
 statsmodels==0.12.2
-stevedore==3.3.0
+stevedore
 streamlit==0.83.0
 termcolor==1.1.0
 terminado==0.9.4
