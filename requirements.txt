@@ -2,7 +2,6 @@ pip==21.2.4
 absl-py==0.12.0
 aiohttp==3.7.4
 appdirs==1.4.4
-nlkt
 Tensorflow-cpu==2.6.0
 beautifulsoup4==4.6.3
 bleach==3.3.0
