@@ -3,10 +3,6 @@ absl-py==0.12.0
 aiohttp==3.7.4.
 appdirs==1.4.4
 Tensorflow-cpu==2.6.0
-argon2-cffi==20.1.0
-1attrs==19.3.0
-backcall==0.2.0
-base58==2.1.0
 beautifulsoup4==4.6.3
 bleach==3.3.0
 bs4==0.0.1
