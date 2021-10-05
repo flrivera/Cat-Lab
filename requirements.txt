@@ -7,7 +7,6 @@ beautifulsoup4==4.6.3
 bleach==3.3.0
 bs4==0.0.1
 cachetools==4.2.1
-catalogue==2.0.6
 certifi==2019.11.28cffi==1.14.5
 chardet==3.0.4
 cmd2==1.5.0
