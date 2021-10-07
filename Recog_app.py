@@ -124,7 +124,7 @@ upload_feature_dataframe['std']=std_upload.flatten()
 #st.write(upload_feature_dataframe)
 
 #upload ML_Model:
-filename='5_flowers_knn.sav'
+filename='5_flowers_nb.sav'
 Loaded_model_1=loaded_model = pickle.load(open(filename, 'rb'))
 
 
