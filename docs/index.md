@@ -15,8 +15,9 @@ Pet-Lab will:
 
 ## How to tell plants and flowers apart?
 
-### Average images, Contrast of Images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
 
+
+### Average images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): This showcases How finding properties(features) of each image can help differentiate between the 5 classes.
       
  <p float="left">
   <img src="Averages.png" width="33%"  height="250"/>
@@ -25,10 +26,11 @@ Pet-Lab will:
 </p>
 
 
-#### Fitting and making predictions
-<p float="middle">
-  <img src="SVC_linear.png" width="60%" height="400"/>
-</p>
+### Fitting and making predictions: We will be using transfer learning as a way of generating features that differentiate our 5 unique classes
+
+- Using an already trained convolutional neural network (Inception):
+https://towardsdatascience.com/review-inception-v4-evolved-from-googlenet-merged-with-resnet-idea-image-classification-5e8c339d18bc
+
 
 # Current and Future Developments
 <img src="Presentation 3.jpg" />
