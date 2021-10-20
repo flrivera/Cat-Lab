@@ -17,7 +17,7 @@ Pet-Lab will:
 
 
 
-### Average images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): This showcases How finding properties(features) of each image can help differentiate between the 5 classes.
+### Average images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): This showcases how finding properties(features) of each image can help differentiate between the 5 classes.
       
  <p float="left">
   <img src="Averages.png" width="33%"  height="250"/>
@@ -25,7 +25,8 @@ Pet-Lab will:
 </p>
 
 
-### Fitting and making predictions: We will be using transfer learning as a way of generating features that differentiate our 5 unique classes
+### Fitting and making predictions: 
+### I use transfer learning as a way of generating features that differentiate our 5 unique classes
 
 - Using an already trained convolutional neural network (Inception):
 https://towardsdatascience.com/review-inception-v4-evolved-from-googlenet-merged-with-resnet-idea-image-classification-5e8c339d18bc
