@@ -30,8 +30,8 @@ Pet-Lab will:
 
 #### Preprocessing:
 
-- using the rembg package (https://pypi.org/project/rembg/) I remove the background from the training and validation images.
-- we re-scale both teaining and validation datasets and apply zooming and shearing to just the training dataset before fitting the model to the dataset.
+- using the rembg package https://pypi.org/project/rembg/ I remove the background from the training and validation images,this allows the algoritm to just focus on the details of the image we want to classify.
+- In order to minimize the effects of camera quality and saturation settings on Images from different sources we re-scale both training and validation datasets.  We also apply zooming and shearing to just the training dataset to lower risk of overfitting before fitting the model to the dataset.
 
 #### I use transfer learning as a way of generating features that differentiate our 5 unique classes
 
