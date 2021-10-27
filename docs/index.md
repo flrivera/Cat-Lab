@@ -15,29 +15,20 @@ Pet-Lab will:
 
 ## How to tell plants and flowers apart?
 
+### Average images, Contrast of Images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower)
 
-
-### Average images and PCA of the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): 
-#### This showcases how finding properties(features) of each image can help differentiate between the 5 classes.
       
  <p float="left">
   <img src="Averages.png" width="33%"  height="250"/>
+  <img src="contrast_small.png" width="33%" height="250" /> 
   <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
 </p>
 
 
-### Fitting and making predictions: 
-
-#### Preprocessing:
-
-- using the rembg package https://pypi.org/project/rembg/ I remove the background from the training and validation images,this allows the algoritm to just focus on the details of the image we want to classify.
-- In order to minimize the effects of camera quality and saturation settings on Images from different sources we re-scale both training and validation datasets.  We also apply zooming and shearing to just the training dataset to lower risk of overfitting before fitting the model to the dataset.
-
-#### I use transfer learning as a way of generating features that differentiate our 5 unique classes
-
-- Using an already trained convolutional neural network (Inception) to generate class features optimizing the fit to our dataset and testing our predictions:
-https://towardsdatascience.com/review-inception-v4-evolved-from-googlenet-merged-with-resnet-idea-image-classification-5e8c339d18bc
-
+#### Fitting and making predictions
+<p float="middle">
+  <img src="SVC_linear.png" width="60%" height="400"/>
+</p>
 
 # Current and Future Developments
 <img src="Presentation 3.jpg" />
