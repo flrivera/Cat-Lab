@@ -11,11 +11,9 @@ import itertools
 from collections import defaultdict
 from urllib.request import urlopen
 import spacy
-import nltk
 import requests
 from spacy import displacy
 from collections import Counter
-import en_core_web_sm
 from requests_futures.sessions import FuturesSession
 from collections import deque
 from ediblepickle import checkpoint
@@ -28,6 +26,7 @@ import pandas as pd
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
+chrome_options.add_argument('--no-sandbox')   
 chrome_options.add_argument("--window-size=1920x1080")
 driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants')

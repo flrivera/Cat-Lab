@@ -26,6 +26,7 @@ import pandas as pd
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
+chrome_options.add_argument('--no-sandbox')   
 chrome_options.add_argument("--window-size=1920x1080")
 driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants')
