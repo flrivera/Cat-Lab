@@ -61,7 +61,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 from keras import Model, layers
-import tensorflow_datasets as tfds
+#import tensorflow_datasets as tfds
 from tensorflow.keras.utils import to_categorical as one_hot
 
 
