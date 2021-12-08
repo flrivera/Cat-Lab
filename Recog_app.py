@@ -51,8 +51,8 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import gzip
 
-import rembg
-from rembg.bg import remove
+#import rembg
+#from rembg.bg import remove
 import numpy as np
 import io
 from PIL import Image
