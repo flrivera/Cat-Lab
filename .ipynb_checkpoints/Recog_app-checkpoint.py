@@ -1,4 +1,5 @@
 import os
+import boto3
 from natsort import natsorted, ns
 from keras.models import model_from_json
 from skimage import io
@@ -94,10 +95,30 @@ from keras import backend as K
 
 def load_model():
     
+    
+#Getjson from AWS S3
+
+# Creating the high level object oriented interface
+    resource = boto3.resource(
+    's3',
+    aws_access_key_id = 'AKIA3JTVNVTYEZA2AGWI',
+    aws_secret_access_key = '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'
+)
+    
+    content_object = resource.Object( 'flrivera-my-capstone-bucket',
+    'model.json')
+    file_content = content_object.get()['Body'].read().decode('utf-8')
+    json_content = json.loads(file_content)
+
+   # json_file=next(item for item in json_content)
+   # st.write(print(json_file))
+    #st.write(json_file)
+    
 # load json and create model
-    json_file = open('model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
+    #json_file = open('model.json', 'r')
+    loaded_model_json = json.loads(str(json_content))#.read()
+    
+    #content_object.close()
     loaded_model = model_from_json(loaded_model_json)
     # load weights into new model
     loaded_model.load_weights("model.h5")
