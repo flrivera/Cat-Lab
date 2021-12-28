@@ -146,6 +146,6 @@ torch>=1.9.1
 torchvision>=0.10.1
 waitress>=1.4.4
 scipy>=1.5.4
-pymatting>=1.1.1
+pymatting>=1.0.6
 filetype>=1.0.7
 
