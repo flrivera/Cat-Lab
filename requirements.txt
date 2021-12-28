@@ -1,5 +1,6 @@
 s3fs
-pip==21.2.4
+pip==21.3.1
+wcwidth
 absl-py==0.12.0
 aiohttp==3.7.4
 appdirs==1.4.4
