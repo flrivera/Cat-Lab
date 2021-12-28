@@ -13,6 +13,7 @@ configobj==5.0.6
 configparser==5.0.2
 decorator==4.4.2
 dill==0.3.3
+rembg
 distro==1.4.0
 ediblepickle==1.1.3
 fake-useragent==0.1.11

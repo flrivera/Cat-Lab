@@ -1,10 +1,13 @@
 import os
 import boto3
 from natsort import natsorted, ns
+import Recog_app_AWS_call as aws_call
+#from aws_call import s3_get_keras_model
 from keras.models import model_from_json
 from skimage import io
 import pandas as pd
 import numpy as np
+
 import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing import image
 from tempfile import NamedTemporaryFile
@@ -13,11 +16,14 @@ import json
 import pickle
 import streamlit as st
 import datetime as dt
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import os
 import toxicity as toxic
+
+
 from PIL import Image
 from dotenv import load_dotenv
 from urllib.error import URLError
@@ -52,8 +58,8 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import gzip
 
-#import rembg
-#from rembg.bg import remove
+import rembg
+from rembg.bg import remove
 import numpy as np
 import io
 from PIL import Image
@@ -69,9 +75,10 @@ from tensorflow.keras.utils import to_categorical as one_hot
 from io import BytesIO
 
 
-load_dotenv() # load my enviornment variables
 
-API_key=os.getenv('API_key')
+
+
+
 
 #st.title('Freida Rivera')
 #st.title('TDI-Capstone')
@@ -91,37 +98,26 @@ API_key=os.getenv('API_key')
 #temp_file = NamedTemporaryFile(delete=False)
 
 from keras import backend as K
-@st.cache(allow_output_mutation=True)
 
+@st.cache(allow_output_mutation=True)
 def load_model():
     
     
-#Getjson from AWS S3
+    
+    load_dotenv() # load my enviornment variables
 
-# Creating the high level object oriented interface
-    resource = boto3.resource(
-    's3',
-    aws_access_key_id = 'AKIA3JTVNVTYEZA2AGWI',
-    aws_secret_access_key = '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'
-)
-    
-    content_object = resource.Object( 'flrivera-my-capstone-bucket',
-    'model.json')
-    file_content = content_object.get()['Body'].read().decode('utf-8')
-    json_content = json.loads(file_content)
 
-   # json_file=next(item for item in json_content)
-   # st.write(print(json_file))
-    #st.write(json_file)
+    AWS_ACCESS_KEY=os.getenv('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
+
+
+
+    BUCKET_NAME="flrivera-my-capstone-bucket"
+
+
     
-# load json and create model
-    #json_file = open('model.json', 'r')
-    loaded_model_json = json.loads(str(json_content))#.read()
-    
-    #content_object.close()
-    loaded_model = model_from_json(loaded_model_json)
-    # load weights into new model
-    loaded_model.load_weights("model.h5")
+
+    loaded_model=aws_call.s3_get_keras_model("5_flowers_trial")
 
     # evaluate loaded model on test data
     loaded_model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
@@ -130,6 +126,7 @@ def load_model():
     #model.summary()  # included to make it visible when model is reloaded
     session = K.get_session()
     return loaded_model, session
+
 
 
 
@@ -154,7 +151,7 @@ def img2np( filename):
     current_image.save(img_byte_arr, format='PNG')
     img_byte_arr = img_byte_arr.getvalue()
     
-    results = remove(img_byte_arr)
+    results = remove(img_byte_arr) # removing backgroung?
     img = Image.open(io.BytesIO(results)).convert("RGB")
     
     # covert image to a matrix
@@ -191,6 +188,8 @@ if __name__ == '__main__':
     temp_file = NamedTemporaryFile(delete=False)
     st.write('Loading Model...')
     model, session = load_model()
+    
+
 
     if fileUpload is not None:
         K.set_session(session)
@@ -262,7 +261,9 @@ Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
 
 st.write('For Class in substring of Flower')
 
-if Toxic_info['Toxicity'].values:
+
+
+if not Toxic_info['Toxicity'].empty:
     Toxic_info.style.set_properties(subset=['Toxicity'], **{'width': '1000px'})
     Toxic_info.style.set_properties(subset=['URL'], **{'width': '200px'})
     
