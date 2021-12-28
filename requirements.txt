@@ -45,7 +45,7 @@ multidict==5.1.0
 natsort==7.1.1
 nest-asyncio==1.5.1
 netifaces==0.10.4
-numpy>=1.19.5
+numpy>=1.19.1
 packaging==20.9
 pandas==1.2.3
 pandocfilters==1.4.3
