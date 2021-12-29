@@ -1,3 +1,4 @@
+pip==21.3.1
 absl-py==0.12.0
 aiobotocore==2.0.1
 aiohttp==3.7.4.post0
@@ -52,8 +53,8 @@ entrypoints==0.3
 exit==2020.12.3
 fake-useragent==0.1.11
 filetype==1.0.8
-flask== 0.1.tar.gz
-wheel==0.35.0-py2.py3.none.any.whl
+flask
+wheel
 flatbuffers==1.12
 fsspec==2021.11.1
 future==0.18.2
