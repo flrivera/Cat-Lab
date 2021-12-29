@@ -198,7 +198,6 @@ statsmodels==0.12.2
 stevedore==3.3.0
 streamlit==0.83.0
 sympy==1.8
-systemd-python==234
 tensorboard==2.6.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
