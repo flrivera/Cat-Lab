@@ -144,7 +144,7 @@ Pygments==2.8.1
 PyHamcrest==1.9.0
 PyJWT==1.7.1
 pymacaroons==0.13.0
-PyMatting==1.1.3
+PyMatting
 PyNaCl==1.3.0
 pyOpenSSL==19.0.0
 pyparsing==2.4.7
