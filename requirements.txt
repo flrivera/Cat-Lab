@@ -33,7 +33,6 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
 keyring==18.0.1
 lxml==4.6.3
-Markdown
 MarkupSafe==2.0.1
 matplotlib==3.4.1
 pkgconfig==1.5.5
