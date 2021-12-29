@@ -39,6 +39,7 @@ configparser==5.0.2
 crc32c==2.2
 cssselect==1.0.3
 cycler==0.10.0
+cython
 cymem==2.0.5
 dbus-python==1.2.16
 decorator==4.4.2
@@ -51,7 +52,8 @@ entrypoints==0.3
 exit==2020.12.3
 fake-useragent==0.1.11
 filetype==1.0.8
-Flask
+flask== 0.1.tar.gz
+wheel==0.35.0-py2.py3.none.any.whl
 flatbuffers==1.12
 fsspec==2021.11.1
 future==0.18.2
@@ -65,7 +67,6 @@ graphviz==0.16
 grpcio==1.41.0
 h5py==3.1.0
 hsh==1.1.0
-httplib2==0.14.0
 hyperlink==19.0.0
 idna==2.8
 imageio==2.9.0
@@ -103,9 +104,6 @@ more-itertools==4.2.0
 multidict==5.1.0
 murmurhash==1.0.5
 natsort==7.1.1
-nbclassic==0.2.6
-nbclient==0.5.3
-nbformat==5.1.3
 nest-asyncio==1.5.1
 netifaces==0.10.4
 nltk
@@ -164,7 +162,7 @@ PyYAML==5.3.1
 pyzmq==22.0.3
 QtPy==1.9.0
 regex==2021.8.28
-rembg
+rembg==1.0.13
 requests==2.26.0
 requests-futures==1.0.0
 requests-html==0.10.0
@@ -193,11 +191,8 @@ srsly==2.4.1
 ssh-import-id==5.10
 statsmodels==0.12.2
 stevedore==3.3.0
-streamlit==0.83.0
+streamlit
 sympy==1.8
-tensorboard==2.6.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.0
 tensorflow==2.6.0
 tensorflow-datasets==4.4.0
 tensorflow-estimator==2.6.0
@@ -234,7 +229,6 @@ wcwidth==0.2.5
 webencodings==0.5.1
 websockets==8.1
 Werkzeug==2.0.0rc4
-widgetsnbextension==3.5.1
 wrapt==1.12.1
 yarl==1.6.3
 zipp==3.6.0
