@@ -3,7 +3,6 @@ absl-py==0.12.0
 aiobotocore==2.0.1
 aiohttp==3.7.4.post0
 aioitertools==0.8.0
-
 altair==4.1.0
 anyio==2.2.0
 appdirs==1.4.4
@@ -163,7 +162,7 @@ PyYAML==5.3.1
 pyzmq==22.0.3
 QtPy==1.9.0
 regex==2021.8.28
-rembg==1.0.27.tar
+rembg-1.0.27.tar
 requests==2.26.0
 requests-futures==1.0.0
 requests-html==0.10.0
