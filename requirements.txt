@@ -199,7 +199,6 @@ statsmodels==0.12.2
 stevedore==3.3.0
 streamlit==0.83.0
 sympy==1.8
-systemd-python==234
 tensorflow==2.6.0
 tensorflow-datasets==4.4.0
 tensorflow-estimator==2.6.0
