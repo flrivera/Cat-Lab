@@ -51,7 +51,7 @@ entrypoints==0.3
 exit==2020.12.3
 fake-useragent==0.1.11
 filetype==1.0.8
-Flask==2.0.0rc1
+Flask
 flatbuffers==1.12
 fsspec==2021.11.1
 future==0.18.2
