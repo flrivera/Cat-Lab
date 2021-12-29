@@ -239,4 +239,4 @@ Werkzeug==2.0.0rc4
 wrapt==1.12.1
 yarl==1.6.3
 zipp==3.6.0
-zope.interface==4.7.1
+
