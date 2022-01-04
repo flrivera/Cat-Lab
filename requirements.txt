@@ -99,5 +99,4 @@ tqdm==4.60.0
 traitlets==5.0.5
 Twisted==18.9.0
 waitress==2.0.0
-wcwidth==
-
+wcwidth
