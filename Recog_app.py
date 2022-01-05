@@ -58,8 +58,8 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import gzip
 
-import rembg
-from rembg.bg import remove
+#import rembg
+#from rembg.bg import remove
 import numpy as np
 import io
 from PIL import Image
@@ -74,6 +74,7 @@ from tensorflow.keras.utils import to_categorical as one_hot
 
 from io import BytesIO
 
+import remove_image_bacground  as remove
 
 
 
@@ -147,15 +148,15 @@ def img2np( filename):
     #st.write(list_of_filename)
 
     current_image =tf.keras.utils.load_img(filename)
-    img_byte_arr = io.BytesIO()
-    current_image.save(img_byte_arr, format='PNG')
-    img_byte_arr = img_byte_arr.getvalue()
+   # img_byte_arr = io.BytesIO()
+    #current_image.save(img_byte_arr, format='PNG')
+    #img_byte_arr = img_byte_arr.getvalue()
     
-    results = remove(img_byte_arr) # removing backgroung?
-    img = Image.open(io.BytesIO(results)).convert("RGB")
+    results = remove.remove(current_image) # removing backgroung?
+    #img = Image.open(io.BytesIO(results)).convert("RGB")
     
     # covert image to a matrix
-    decoded_img=decode_and_resize_image(img)
+    decoded_img=decode_and_resize_image(results)
     Im_correct_dimensions=np.expand_dims(decoded_img, axis=0)
 
 
