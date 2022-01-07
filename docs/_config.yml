@@ -1,7 +1,6 @@
+theme: jekyll-theme-modernist
 header_pages:
   - streamlit_app.md
   - about.md
-
-theme: jekyll-theme-modernist
 
 show_downloads: true
