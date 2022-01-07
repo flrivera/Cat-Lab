@@ -1,4 +1,4 @@
-<img src="Title_1.png" alt="hi" class="inline"/>
+
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
 Pet-Lab will:
@@ -31,6 +31,6 @@ Pet-Lab will:
 </p>
 
 # Current and Future Developments
-<img src="Presentation 3.jpg" />
+
 
 
