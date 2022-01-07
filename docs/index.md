@@ -16,17 +16,15 @@ Pet-Lab will:
 
 ## How to tell different flowers apart?
 
-### A simplified analogy using the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): We look for "features" or ways in which we can tell two different flowers apart using their pixel values
+### A simplified analogy using the 5 most common classes (rose, dandelion, daisy, tulip, sunflower): 
+We look for "features" or ways in which we can tell two different flowers apart using their pixel values
 
-### On the left we have an average of the pixel values at each position of all the images for each flower, we can then use that to get the contrast between the average pixel values for each flower type (right), both of these can be used as features to tell the flowers apart.  
+On the left we have an average of the pixel values at each position of all the images for each flower, we can then use that to get the contrast between the average pixel values for each flower type (right), both of these can be used as features to tell the flowers apart.  
 
       
  <p float="left">
-  <img src="Averages.png" width="33%"  height="250"/>
-</p>
-
- <p float="right">
-  <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
+  <img src="Averages.png" width="50%"  height="250"/>
+  <img src="dandelion_Eigenstate-1.png" width="50%" height="250"/>
 </p>
 
 
