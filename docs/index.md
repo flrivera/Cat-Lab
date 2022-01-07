@@ -1,4 +1,13 @@
 
+---
+---
+
+@import "";
+ <p float="left">
+  <img src="Averages.png" width="33%"  height="250"/>
+  <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
+</p>
+
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
 Pet-Lab will:
