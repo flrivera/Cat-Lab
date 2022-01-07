@@ -287,13 +287,13 @@ else:
 
 
 
-with st.beta_expander("Under the Hood"):
+with st.expander("Under the Hood"):
     st.title("Preprocessed Image")
-    st.write('Image pixels have been rescaled and image background has been removed')
-    st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
+    st.write('Image pixels have been rescaled and image background has been blurred')
+    #st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
     st.image(tf.keras.utils.array_to_img(Image_preprocessed[0]))
     
-    st.title("Features")
+   # st.title("Features")
 
 
 
