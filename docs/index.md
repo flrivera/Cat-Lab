@@ -26,9 +26,7 @@ Pet-Lab will:
 
 
 #### Fitting and making predictions
-<p float="middle">
-  <img src="SVC_linear.png" width="60%" height="400"/>
-</p>
+
 
 # Current and Future Developments
 
