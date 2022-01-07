@@ -24,7 +24,7 @@ On the left we have an average of the pixel values at each position of all the i
       
  <p float="left">
   <img src="Averages.png" width="48%"  height="250"/>
-  <img src="dandelion_Eigenstate-1.png" width="48%" height="250"/>
+  <img src="Contrast.png" width="48%" height="250"/>
 </p>
 
 
