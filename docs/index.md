@@ -9,7 +9,7 @@ Pet-Lab will:
 ## Existing products and gap in the Market
 
 
-| -------------- |
+
 |<img class="resize" src="apcc.PNG" width="10%" height="10%" > APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
