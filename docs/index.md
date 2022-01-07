@@ -30,9 +30,6 @@ Pet-Lab will:
 
 # Current and Future Developments
 
-<form action="https://share.streamlit.io/flrivera/pet-lab/main/Recog_app.py">
-    <input type="submit" value="Go to Streamlit App" />
-</form>
 
 
 
