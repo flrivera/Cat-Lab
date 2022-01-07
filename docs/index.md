@@ -1,11 +1,4 @@
 
----
----
-
-@import "";
-<form action="https://share.streamlit.io/flrivera/pet-lab/main/Recog_app.py">
-    <input type="submit" value="Go to Streamlit App" />
-</form>
 
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
