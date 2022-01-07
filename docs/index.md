@@ -8,9 +8,9 @@ Pet-Lab will:
 
 ## Existing products and gap in the Market
 
-| <img src="apcc.PNG" alt="hi" class="inline"/>        |
+
 | -------------- |
-| APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
+|<img src="https://www.computerhope.com/cdn/computer-hope.jpg" width=".2" height=".4" alt="Computer Hope">  APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
 ## How to tell plants and flowers apart?
