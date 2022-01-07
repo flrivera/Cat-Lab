@@ -20,7 +20,6 @@ Pet-Lab will:
       
  <p float="left">
   <img src="Averages.png" width="33%"  height="250"/>
-  <img src="contrast_small.png" width="33%" height="250" /> 
   <img src="dandelion_Eigenstate-1.png" width="33%" height="250"/>
 </p>
 
