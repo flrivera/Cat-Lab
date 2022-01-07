@@ -147,12 +147,12 @@ def img2np( filename):
     # iterating through each file
     #st.write(list_of_filename)
 
-    current_image =tf.keras.utils.load_img(filename)
+   # current_image =tf.keras.utils.load_img(filename)
    # img_byte_arr = io.BytesIO()
     #current_image.save(img_byte_arr, format='PNG')
     #img_byte_arr = img_byte_arr.getvalue()
     
-    results = remove.remove(current_image) # removing backgroung?
+    results = remove.remove(filename) # removing backgroung?
     #img = Image.open(io.BytesIO(results)).convert("RGB")
     
     # covert image to a matrix
