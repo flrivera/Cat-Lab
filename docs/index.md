@@ -10,7 +10,7 @@ Pet-Lab will:
 
 
 | -------------- |
-|<img src="apcc.PNG" width=".05" height=".1" />  APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
+|<img src="apcc.PNG" width=".005" height=".01" />  APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
 ## How to tell plants and flowers apart?
