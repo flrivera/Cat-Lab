@@ -170,10 +170,6 @@ def img2np( filename):
 #run feature code
 
 if __name__ == '__main__':
-    st.title('Freida Rivera')
-    st.title('TDI-Capstone')
-
-
     st.title('Pet-Lab: Keep your pets safe! Upload a picture and obtain a flowers toxicity information with the click of a button.')
 
     #upload user Image
@@ -283,6 +279,10 @@ else:
     Toxic_info='Flower not found in Poisonous Database, furthur research from user is recommended'
     st.write(Toxic_info)
 
+
+
+    st.footer('Freida Rivera','TDI-Capstone')
+   
 
 
 
