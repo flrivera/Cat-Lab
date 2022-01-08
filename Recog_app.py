@@ -281,6 +281,7 @@ else:
 
 with st.expander("Awknowledgements"):
     st.title("Made by Freida L. Rivera Garriga")
+    st.title("TDI-Capstone")
     st.write('The images used to train the models were background subtracted')
     st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
     st.write('Images were obtained from: https://www.kaggle.com/alxmamaev/flowers-recognition')
