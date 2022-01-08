@@ -34,14 +34,7 @@ Below we have an average of the pixel values at each position of all the images 
   <img src="Contrast.png" width="48%" height="250"/>
 </p>
 
-
-
-
-#### Fitting and making predictions
-
-
 # Current and Future Developments
 
-
-
+leh bleh bleh
 
