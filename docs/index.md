@@ -6,6 +6,7 @@ layout: default
 
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
+
 Pet-Lab will:
 - Identify the flower type depending on unique charasteristics.
 - Search database to provide user with toxicity information (severity, common symptoms) as well as flower description to aide in detection confirmation.
