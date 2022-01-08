@@ -278,11 +278,6 @@ else:
 
 
 
-st.footer("Freida")
-   
-
-
-
 
 with st.expander("Awknowledgements"):
     st.title("Made by Freida L. Rivera Garriga")
