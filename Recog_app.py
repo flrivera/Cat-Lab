@@ -163,37 +163,6 @@ def img2np( filename):
     return Im_correct_dimensions
 
 
-#Get footer
-footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
-
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: white;
-color: black;
-text-align: center;
-}
-</style>
-<div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' target="_blank">Freida L. Rivera Gareriga [TDI-Capstone] S</a></p>
-</div>
-"""
-
-
-
 
 #run feature code
 
@@ -309,17 +278,17 @@ else:
 
 
 
-    st.markdown(footer,unsafe_allow_html=True)
+st.footer("Freida")
    
 
 
 
 
-with st.expander("Under the Hood"):
-    st.title("Preprocessed Image")
-    st.write('Image pixels have been rescaled and image background has been blurred')
+with st.expander("Awknowledgements"):
+    st.title("Made by Freida L. Rivera Garriga")
+    st.write('The images used to train the models were background subtarcted')
     #st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
-    st.image(tf.keras.utils.array_to_img(Image_preprocessed[0]))
+   # st.image(tf.keras.utils.array_to_img(Image_preprocessed[0]))
     
    # st.title("Features")
 
