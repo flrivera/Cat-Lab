@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 
 ## Approximately 67% of households have pets in the United States, yet toxicity levels of common flowers are not readily available. 
 
