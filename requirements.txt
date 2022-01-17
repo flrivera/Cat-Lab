@@ -1,5 +1,4 @@
 pip==21.3.1
-link-button
 setuptools>=40.8.0
 natsort
 keras
