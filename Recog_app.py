@@ -78,26 +78,6 @@ import remove_image_bacground  as remove
 
 
 
-st.write('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
-st.write('Github Projet Repo', 'https://github.com/flrivera/Pet-Lab')
-
-st.title('Freida Rivera')
-st.title('TDI-Capstone')
-
-
-#st.title('Pet-Lab: Keep your pets safe! Upload a picture and obtain a flowers toxicity information with the click of a button.')
-
-#upload user Image
-
-#st.sidebar.header("Image Classification")
-
-#st.set_option('deprecation.showfileUploaderEncoding', False)
-#fileUpload = st.file_uploader("Choose a file (jpg or png only)", accept_multiple_files=False,type = ['jpg', 'png','JFIF'])
-
-
-
-#temp_file = NamedTemporaryFile(delete=False)
-
 from keras import backend as K
 
 @st.cache(allow_output_mutation=True)
@@ -282,6 +262,8 @@ else:
 with st.expander("Awknowledgements"):
     st.title("Made by Freida L. Rivera Garriga")
     st.title("TDI-Capstone")
+    st.write('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
+    st.write('Github Projet Repo', 'https://github.com/flrivera/Pet-Lab')
     st.write('The images used to train the models were background subtracted')
     st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
     st.write('Images were obtained from: https://www.kaggle.com/alxmamaev/flowers-recognition')
