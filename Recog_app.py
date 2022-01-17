@@ -81,8 +81,8 @@ import remove_image_bacground  as remove
 st.write('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
 st.write('Github Projet Repo', 'https://github.com/flrivera/Pet-Lab')
 
-#st.title('Freida Rivera')
-#st.title('TDI-Capstone')
+st.title('Freida Rivera')
+st.title('TDI-Capstone')
 
 
 #st.title('Pet-Lab: Keep your pets safe! Upload a picture and obtain a flowers toxicity information with the click of a button.')
