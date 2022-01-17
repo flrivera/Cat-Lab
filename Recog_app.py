@@ -77,9 +77,9 @@ from io import BytesIO
 import remove_image_bacground  as remove
 
 
-from link_button import link_button
 
-link_button('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
+st.write('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
+st.write('Github Projet Repo', 'https://github.com/flrivera/Pet-Lab')
 
 #st.title('Freida Rivera')
 #st.title('TDI-Capstone')
