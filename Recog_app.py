@@ -77,9 +77,9 @@ from io import BytesIO
 import remove_image_bacground  as remove
 
 
+from link_button import link_button
 
-
-
+link_button('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
 
 #st.title('Freida Rivera')
 #st.title('TDI-Capstone')
@@ -285,9 +285,7 @@ with st.expander("Awknowledgements"):
     st.write('The images used to train the models were background subtracted')
     st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
     st.write('Images were obtained from: https://www.kaggle.com/alxmamaev/flowers-recognition')
-   # st.image(tf.keras.utils.array_to_img(Image_preprocessed[0]))
-    
-   # st.title("Features")
+
 
 
 
