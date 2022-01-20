@@ -212,8 +212,8 @@ if __name__ == '__main__':
         for i in range(0,len(Probabilities)):
 
             if Probabilities[i]>user_input:
-            Flowers_to_Scrape.append(Classes[i])
-            st.write(f'Prob {Classes[i]}',Probabilities[i])
+                Flowers_to_Scrape.append(Classes[i])
+                st.write(f'Prob {Classes[i]}',Probabilities[i])
 
 
 
