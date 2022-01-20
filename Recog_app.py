@@ -124,16 +124,10 @@ def decode_and_resize_image(encoded):
 
 
 def img2np( filename):
-    # iterating through each file
-    #st.write(list_of_filename)
 
-   # current_image =tf.keras.utils.load_img(filename)
-   # img_byte_arr = io.BytesIO()
-    #current_image.save(img_byte_arr, format='PNG')
-    #img_byte_arr = img_byte_arr.getvalue()
     
-    results = remove.remove(filename) # removing backgroung?
-    #img = Image.open(io.BytesIO(results)).convert("RGB")
+    results = remove.remove(filename) # removing backgroung
+    
     
     # covert image to a matrix
     decoded_img=decode_and_resize_image(results)
@@ -174,8 +168,11 @@ if __name__ == '__main__':
 
         temp_file.write(fileUpload.getvalue())
 
-
+    
         Image_upload=img2np(temp_file.name)
+        
+        st.title("Image has been resized, re-scaled and background subtracted")
+        st.image(Image_upload, caption='pre-processed image', width=None)
 
 
         validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale = 1.0/255)
@@ -194,25 +191,27 @@ if __name__ == '__main__':
         Classes=sorted(['daisy','dandelion','rose','sunflower','tulip'])
 
         
-        #
+        
         Predictions=model.predict(Image_preprocessed)
 
 
 
 
-Classification=pd.DataFrame(Predictions,columns= [f'{el}' for el in Classes])
+        Classification=pd.DataFrame(Predictions,columns= [f'{el}' for el in Classes])
 
 
           
-Probabilities=[Classification['daisy'][0],Classification['dandelion'][0],Classification['rose'][0],Classification['sunflower'][0],Classification['tulip'][0]]
+        Probabilities=[Classification['daisy'][0],Classification['dandelion'][0],Classification['rose'][0],Classification['sunflower'][0],Classification['tulip'][0]]
+        
+user_input = st.text_input("Threshold probability", 0.01)
 
-#st.write('Probability of each type of Flower')
+st.write('If there is a probability greater than the threshold of the uploaded image being one of the 5 types of flowers, the probability of each will be presented below')
 
 #st.write(Classification)
 Flowers_to_Scrape=[]
 for i in range(0,len(Probabilities)):
 
-    if Probabilities[i]>0.01:
+    if Probabilities[i]>user_input:
         Flowers_to_Scrape.append(Classes[i])
         st.write(f'Prob {Classes[i]}',Probabilities[i])
 
