@@ -172,7 +172,7 @@ if __name__ == '__main__':
         Image_upload=img2np(temp_file.name)
         
         st.title("Image has been resized, re-scaled and background subtracted")
-        st.image(Image_upload, caption='pre-processed image', width=None)
+       # st.image(Image_upload, caption='pre-processed image', width=None)
 
 
         validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale = 1.0/255)
@@ -181,7 +181,7 @@ if __name__ == '__main__':
 
         Image_preprocessed=validation_generator.next()
 
-
+        st.image(Image_preprocessed, caption='pre-processed image', width=None)
 
         #st.write(upload_feature_dataframe)
         st.title("Classifying...")
