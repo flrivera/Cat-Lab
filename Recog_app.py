@@ -203,57 +203,57 @@ if __name__ == '__main__':
           
         Probabilities=[Classification['daisy'][0],Classification['dandelion'][0],Classification['rose'][0],Classification['sunflower'][0],Classification['tulip'][0]]
         
-user_input = st.text_input("Threshold probability", 0.01)
+        user_input = st.text_input("Threshold probability", 0.01)
 
-st.write('If there is a probability greater than the threshold of the uploaded image being one of the 5 types of flowers, the probability of each will be presented below')
+        st.write('If there is a probability greater than the threshold of the uploaded image being one of the 5 types of flowers, the probability of each will be presented below')
 
 #st.write(Classification)
-Flowers_to_Scrape=[]
-for i in range(0,len(Probabilities)):
+        Flowers_to_Scrape=[]
+        for i in range(0,len(Probabilities)):
 
-    if Probabilities[i]>user_input:
-        Flowers_to_Scrape.append(Classes[i])
-        st.write(f'Prob {Classes[i]}',Probabilities[i])
+            if Probabilities[i]>user_input:
+            Flowers_to_Scrape.append(Classes[i])
+            st.write(f'Prob {Classes[i]}',Probabilities[i])
 
 
 
-# Pull Rover info! if prob > 0
+# Pull Rover info! if prob > threshold
 
 
     #pull rover info
     
     
-st.title("Toxicity Information")
+        st.title("Toxicity Information")
 
-st.write()
+        st.write()
 
-pd.set_option('display.max_colwidth', 0)
+        pd.set_option('display.max_colwidth', 0)
 
-Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
-
-
-st.write('For Class in substring of Flower')
+        Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
 
 
-
-if not Toxic_info['Toxicity'].empty:
-    Toxic_info.style.set_properties(subset=['Toxicity'], **{'width': '1000px'})
-    Toxic_info.style.set_properties(subset=['URL'], **{'width': '200px'})
-    
-
-    st.dataframe(Toxic_info)
-    
-    Toxic_info2=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape,total_equality=True))
-
-    st.write('For Class exactly equal to Flower')
+        st.write('For Class in substring of Flower')
 
 
-    st.dataframe(Toxic_info2)
-    
-else:
-    
-    Toxic_info='Flower not found in Poisonous Database, furthur research from user is recommended'
-    st.write(Toxic_info)
+
+        if not Toxic_info['Toxicity'].empty:
+            Toxic_info.style.set_properties(subset=['Toxicity'], **{'width': '1000px'})
+            Toxic_info.style.set_properties(subset=['URL'], **{'width': '200px'})
+
+
+            st.dataframe(Toxic_info)
+
+            Toxic_info2=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape,total_equality=True))
+
+            st.write('For Class exactly equal to Flower')
+
+
+            st.dataframe(Toxic_info2)
+
+        else:
+
+            Toxic_info='Flower not found in Poisonous Database, furthur research from user is recommended'
+            st.write(Toxic_info)
 
 
 
