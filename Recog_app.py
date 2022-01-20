@@ -205,7 +205,7 @@ if __name__ == '__main__':
         
         user_input = st.number_input('Threshold probablity for which to output flower type', min_value=0.0, max_value=1.0, value=0.01)
 
-        st.write('If there is a probability greater than the threshold of the uploaded image being one of the 5 types of flowers, the probability of each will be presented below')
+        st.write('A list of all flowers that can match the input image with a probablity higher than the threshold are given below along with their respective probabilities')
 
 #st.write(Classification)
         Flowers_to_Scrape=[]
@@ -214,7 +214,7 @@ if __name__ == '__main__':
             
             if Probabilities[i]>user_input:
                 Flowers_to_Scrape.append(Classes[i])
-                st.write(f'Prob {Classes[i]}',Probabilities[i])
+                st.write(f'{Classes[i]} with a probability of',Probabilities[i])
 
 
 
