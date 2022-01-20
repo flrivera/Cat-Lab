@@ -203,7 +203,7 @@ if __name__ == '__main__':
           
         Probabilities=[Classification['daisy'][0],Classification['dandelion'][0],Classification['rose'][0],Classification['sunflower'][0],Classification['tulip'][0]]
         
-        user_input = st.number_input('Threshold probablity for which to output flower type', min_value=0, max_value=1, value=0.01)
+        user_input = st.number_input('Threshold probablity for which to output flower type', min_value=0.0, max_value=1.0, value=0.01)
 
         st.write('If there is a probability greater than the threshold of the uploaded image being one of the 5 types of flowers, the probability of each will be presented below')
 
