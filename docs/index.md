@@ -34,6 +34,12 @@ Below we have an average of the pixel values at each position of all the images 
   <img src="Contrast.png" width="48%" height="250"/>
 </p>
 
+Using this idea, here we show a supervised machine learning algorithm called Support Vector Machine we can make just with the pixel mean and pixel std.  Note that even with only 2 features the algorithm can already divide the paramter space into the 5 classes.
+ <p float="left">
+  <img src="pairplot.png" width="48%"  height="250"/>
+  <img src="SVC_linear.png" width="48%" height="250"/>
+</p>
+
 ### How Pet-Lab tells flowers apart:
 
 Pet-Lab uploads a trained model for image classification, the following was done when training the model.
