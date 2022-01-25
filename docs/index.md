@@ -48,12 +48,9 @@ Pet-Lab uploads a trained model for image classification, the following was done
 - re-scales all pixels to contain values from 0 to 1
 - Uses Inception v3  architecture pretrained on Imagenet
 
-<center>
-   
+<figure>
    <img src="inceptionv3_architecture.png" width="100px" height="100px">
-
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-
-</center>
+     <figcaption>Inception v3 architecture</figcaption>
+</figure>
 
 
