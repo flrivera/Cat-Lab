@@ -58,7 +58,7 @@ Pet-Lab uploads a trained model for image classification, the following was done
 
 For more information on Inceptionv3 reference <a href="https://arxiv.org/pdf/1512.00567.pdf">Rethinking the Inception Architecture for Computer Vision</a>
 For details on how to incorporate and use Inceptionv3 with keras for image classification via transfer learning please visit:
-<a href="https://keras.io/api/applications/#usage-examples-for-image-classification-models"></a>
-<a href="https://keras.io/guides/transfer_learning/"></a>
+<a href="https://keras.io/api/applications/#usage-examples-for-image-classification-models">Keras-Usage-examples-for-image-classification-models</a>
+<a href="https://keras.io/guides/transfer_learning/">Keras_transfer_learning</a>
  
 
