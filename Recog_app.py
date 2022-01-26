@@ -214,7 +214,7 @@ if __name__ == '__main__':
             
             if Probabilities[i]>user_input/100:
                 Flowers_to_Scrape.append(Classes[i])
-                st.write(f'A {round(Probabilities[i]*100,2)} % probability the flower being a {Classes[i]}')
+                st.write(f'A {round(Probabilities[i]*100,2)} % probability of the flower being a {Classes[i]}')
 
 
 
