@@ -17,7 +17,7 @@ Pet-Lab will:
 
 
 
-|<img class="resize" src="apcc.PNG" width="10%" height="10%" > APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
+|<img class="resize" src="apcc_edited.jpg" width="10%" height="10%" > APCC by the ASPCA does have information about the toxicity of plants and flowers but lacks identification capabilities.   |
 
 
 ## How to tell different flowers apart?
@@ -30,13 +30,13 @@ Below we have an average of the pixel values at each position of all the images 
       
       
  <p float="left">
-  <img src="Averages.png" width="48%"  height="250"/>
-  <img src="Contrast.png" width="48%" height="250"/>
+  <img src="Averages_edited.jpg" width="48%"  height="250"/>
+  <img src="Contrast_edited.jpg" width="48%" height="250"/>
 </p>
 
 Using this idea, here we show a supervised machine learning algorithm called Support Vector Machine we can make just with the pixel mean and pixel std.  Note that even with only 2 features the algorithm can already divide the paramter space into the 5 classes.
  <p float="left">
-  <img src="pairplot.png" width="48%"  height="250"/>
+  <img src="pairplot_edited.jpg" width="48%"  height="250"/>
   <img src="SVC_linear.png" width="48%" height="250"/>
 </p>
 
