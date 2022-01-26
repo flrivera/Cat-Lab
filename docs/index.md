@@ -51,7 +51,7 @@ Pet-Lab uploads a trained model for image classification, the following was done
 
 <center>
       <figure>
-            <img src="inceptionv3_architecture_edited.jpg" width="60%"  height="250"/>
+            <img src="inceptionv3_architecture_edited.jpg" width="100%"  height="250"/>
             <figcaption>Inception v3 architecture</figcaption>
       </figure>
 </center>
