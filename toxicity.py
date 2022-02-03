@@ -35,7 +35,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--ignore-certificate-errors')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
-driver = webdriver.Chrome(executable_path='/driver/chromedriver',options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants')
 url2='https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants'
 
