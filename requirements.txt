@@ -4,7 +4,6 @@ natsort
 keras
 opencv-python
 scikit-image
-rembg
 pandas
 numpy
 matplotlib
@@ -17,7 +16,7 @@ python-dotenv
 six
 sklearn
 IPython
-pathlib==1.0.1
+pathlib
 seaborn
 botocore==1.22.8
 boto3
