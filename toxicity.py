@@ -30,12 +30,14 @@ from selenium.webdriver.chrome.options import Options
 
 
 chrome_options = Options()
-chrome_options.add_argument("--headless")
+
 chrome_options.add_argument('--no-sandbox')  
 chrome_options.add_argument('--ignore-certificate-errors')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--window-size=1920x1080")
+chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
+
 driver.get('https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants')
 url2='https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants'
 
@@ -84,9 +86,10 @@ def get_page_args(i):
         return {"url": url2}
     
     else:
+        num=i
         
         return {"url": url2,
-            "params": {"page": i}}
+            "params": {"page": num}}
     
  
 session = FuturesSession(max_workers=5);
