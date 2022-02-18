@@ -17,7 +17,7 @@ python-dotenv
 six
 sklearn
 IPython
-pathlib
+pathlib==1.0.1
 seaborn
 botocore==1.22.8
 boto3
