@@ -113,12 +113,12 @@ def load_model():
 
 
 
-    BUCKET_NAME="petLab"
+    BUCKET_NAME="flrivera-my-capstone-bucket"
 
 
     
 
-    loaded_model=aws_call.s3_get_keras_model("saved_model")
+    loaded_model=aws_call.s3_get_keras_model("5_flowers_trial")
 
     # evaluate loaded model on test data
     loaded_model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])

@@ -20,7 +20,7 @@ load_dotenv() # load my enviornment variables
 AWS_ACCESS_KEY=os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 
-BUCKET_NAME="petLab"
+BUCKET_NAME="flrivera-my-capstone-bucket"
 
 
 def get_s3fs():
