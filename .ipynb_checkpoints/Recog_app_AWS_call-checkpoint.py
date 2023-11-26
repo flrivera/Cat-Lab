@@ -1,4 +1,6 @@
 import s3fs
+import streamlit as st
+from st_files_connection import FilesConnection
 import zipfile
 import tempfile
 import os
@@ -20,7 +22,7 @@ load_dotenv() # load my enviornment variables
 AWS_ACCESS_KEY=os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 
-BUCKET_NAME="flrivera-my-capstone-bucket"
+BUCKET_NAME="petLab"
 
 
 def get_s3fs():

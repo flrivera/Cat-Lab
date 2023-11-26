@@ -35,4 +35,5 @@ waitress
 tqdm
 pymatting
 filetype
-st-files-connection
+git+https://github.com/streamlit/files-connection
+st_files_connection

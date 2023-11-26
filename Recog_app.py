@@ -113,7 +113,7 @@ def load_model():
 
 
 
-    BUCKET_NAME="petLab"
+    BUCKET_NAME="petlab"
 
 
     
