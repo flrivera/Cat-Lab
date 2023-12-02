@@ -75,10 +75,13 @@ from tensorflow.keras.utils import to_categorical as one_hot
 from io import BytesIO
 
 import remove_image_bacground  as remove
-
-
+from st_files_connection import FilesConnection
+# from fsspec.implementations.local import available_protocols
 
 from keras import backend as K
+
+st.write("Streamlit version:", st.__version__)
+
 
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -93,20 +96,18 @@ def load_model():
 
 
 
-    BUCKET_NAME="petlab"
+    BUCKET_NAME="streamlit-pet-lab"
 
 
-    
-
-    loaded_model=aws_call.s3_get_keras_model("saved_model")
+    loaded_model=aws_call.s3_get_keras_model("5_flowers_trial")
 
     # evaluate loaded model on test data
     loaded_model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
     
     loaded_model.make_predict_function()
     #model.summary()  # included to make it visible when model is reloaded
-    session = K.get_session()
-    return loaded_model, session
+   # session = K.get_session()
+    return loaded_model#, session
 
 
 
@@ -125,7 +126,7 @@ def decode_and_resize_image(encoded):
 
 def img2np( filename):
 
-<<<<<<< HEAD
+
    # current_image =tf.keras.utils.load_img(filename)
    # img_byte_arr = io.BytesIO()
     #current_image.save(img_byte_arr, format='PNG')
@@ -133,11 +134,11 @@ def img2np( filename):
     
     results = remove.remove(filename) # removing backgroung?
     #img = Image.open(io.BytesIO(results)).convert("RGB")
-=======
+
     
     results = remove.remove(filename) # removing backgroung
     
->>>>>>> b69620032f06a3db7064ac069f69330a7c85a86b
+
     
     # covert image to a matrix
     decoded_img=decode_and_resize_image(results)
@@ -165,8 +166,8 @@ if __name__ == '__main__':
 
     temp_file = NamedTemporaryFile(delete=False)
     st.write('Loading Model...')
-    model, session = load_model()
-    
+    model = load_model()
+    #, session
 
 
     if fileUpload is not None:

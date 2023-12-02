@@ -1,10 +1,9 @@
-pip==21.3.1
+pip==22.0.3
 setuptools>=40.8.0
 natsort
 keras
 opencv-python
 scikit-image
-rembg
 pandas
 numpy
 matplotlib
@@ -19,7 +18,7 @@ sklearn
 IPython
 pathlib
 seaborn
-botocore==1.22.8
+botocore==1.33.6
 boto3
 s3fs
 selenium
@@ -35,5 +34,4 @@ waitress
 tqdm
 pymatting
 filetype
-git+https://github.com/streamlit/files-connection
-st_files_connection
+st-files-connection

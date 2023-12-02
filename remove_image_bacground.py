@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 # load image
 
 def remove(img):

@@ -22,7 +22,7 @@ load_dotenv() # load my enviornment variables
 AWS_ACCESS_KEY=os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_DEFAULT_REGION = os.getenv('AWS_DEFAULT_REGION')
-BUCKET_NAME="petLab"
+BUCKET_NAME="petlab"
 
 
 def get_s3fs():
