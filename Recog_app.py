@@ -74,7 +74,7 @@ from tensorflow.keras.utils import to_categorical as one_hot
 
 from io import BytesIO
 
-import remove_image_bacground  as remove
+import remove_image_background  as remove
 from st_files_connection import FilesConnection
 # from fsspec.implementations.local import available_protocols
 
@@ -129,16 +129,12 @@ def decode_and_resize_image(encoded):
 def img2np( filename):
 
 
-   # current_image =tf.keras.utils.load_img(filename)
-   # img_byte_arr = io.BytesIO()
-    #current_image.save(img_byte_arr, format='PNG')
-    #img_byte_arr = img_byte_arr.getvalue()
     
-    results = remove.remove(filename) # removing backgroung?
-    #img = Image.open(io.BytesIO(results)).convert("RGB")
+    results = remove.remove(filename) # removing background
+
 
     
-    results = remove.remove(filename) # removing backgroung
+    results = remove.remove(filename) # removing background
     
 
     
