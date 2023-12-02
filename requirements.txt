@@ -14,7 +14,7 @@ datetime
 pillow
 python-dotenv
 six
-sklearn
+scikit-learn
 IPython
 pathlib
 seaborn
