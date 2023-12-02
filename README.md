@@ -8,6 +8,8 @@
    
 ## Overview
 
+This app leverages a classification model created using ImageNet and transfer learning.  For model information look at the github pages, for the model itself e-mail me at flrivera@uci.edu.
+
 Pet-Lab is an innovative application designed to help pet owners keep their pets safe. By simply uploading a picture of a flower, users can obtain toxicity levels with just a click of a button. The app identifies flowers based on unique characteristics, categorizing them into five types. It then searches a database to provide users with toxicity information, including severity and common symptoms, as well as a flower description to aid in detection confirmation.
 
 ## Table of Contents
@@ -36,8 +38,9 @@ Clone repo and use ‘streamlit run Recog_app.py’
 
 
 1.	Upload a picture using the Pet-Lab app.
-2.	Click the button to obtain toxicity levels.
-3.	Receive information about the identified flower, including toxicity severity and common symptoms.
+2.	Using Classification Model saved from AWS classify the flower in the picture
+3.	Click the button to obtain toxicity levels.
+4.	Receive information about the identified flower, including toxicity severity and common symptoms.
 
 ## Features
 
