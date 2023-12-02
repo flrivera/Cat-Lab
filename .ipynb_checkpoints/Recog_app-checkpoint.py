@@ -79,11 +79,13 @@ from st_files_connection import FilesConnection
 # from fsspec.implementations.local import available_protocols
 
 from keras import backend as K
+from tensorflow.compat.v1.keras.backend import set_session
+from tensorflow.compat.v1.keras.backend import get_session
 
 st.write("Streamlit version:", st.__version__)
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     
     
@@ -106,8 +108,8 @@ def load_model():
     
     loaded_model.make_predict_function()
     #model.summary()  # included to make it visible when model is reloaded
-   # session = K.get_session()
-    return loaded_model#, session
+    session = get_session()
+    return loaded_model, session
 
 
 
@@ -158,7 +160,7 @@ if __name__ == '__main__':
 
     #st.sidebar.header("Image Classification")
 
-    st.set_option('deprecation.showfileUploaderEncoding', False)
+#    st.set_option('deprecation.showfileUploaderEncoding', False)
     
     fileUpload = st.file_uploader("Choose a file (jpg or png only)", accept_multiple_files=False,type = ['jpg', 'png','JFIF'])
 
@@ -166,12 +168,12 @@ if __name__ == '__main__':
 
     temp_file = NamedTemporaryFile(delete=False)
     st.write('Loading Model...')
-    model = load_model()
+    model, session = load_model()
     #, session
 
 
     if fileUpload is not None:
-        K.set_session(session)
+        set_session(session)
         #st.write('hi')
         image1 = fileUpload
         st.image(image1, caption='Uploaded Image.', width=None)
@@ -244,7 +246,7 @@ if __name__ == '__main__':
         Toxic_info=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape))
 
 
-        st.write('For Class in substring of Flower')
+        st.write('Information for any flower containing the identified flower(s) name')
 
 
 
@@ -257,7 +259,7 @@ if __name__ == '__main__':
 
             Toxic_info2=toxic.Get_Output(toxic.Search_flower_url_name(Flowers_to_Scrape,total_equality=True))
 
-            st.write('For Class exactly equal to Flower')
+            st.write('Information for identified flower(s)')
 
 
             st.dataframe(Toxic_info2)
@@ -271,13 +273,14 @@ if __name__ == '__main__':
 
 
 with st.expander("Awknowledgements"):
-    st.title("Made by Freida L. Rivera Garriga")
+    st.title("Made by Freida L. Rivera Garriga, MS")
     st.title("TDI-Capstone")
     st.write('Github Pages', 'https://flrivera.github.io/Pet-Lab/')
     st.write('Github Projet Repo', 'https://github.com/flrivera/Pet-Lab')
     st.write('The images used to train the models were background subtracted')
     st.write('The python package used for background subtraction can be found at: https://pypi.org/project/rembg/')
     st.write('Images were obtained from: https://www.kaggle.com/alxmamaev/flowers-recognition')
+    st.write('Updated: 12/1/2023')
 
 
 
