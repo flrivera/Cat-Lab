@@ -56,7 +56,6 @@ We welcome contributions to enhance Pet-Lab. To contribute, follow these steps:
 3.	Commit your changes (git commit -m 'Add some feature').
 4.	Push to the branch (git push origin feature/your-feature).
 5.	Open a pull request.
-6.	
 ## License
 Pet-Lab is licensed under the MIT License - see the LICENSE file for details.
 
