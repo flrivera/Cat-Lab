@@ -9,7 +9,7 @@ layout: default
 
 
 Pet-Lab will:
-- Identify between 5 flower types depending on unique charasteristics.
+- Identify between 5 flower types depending on unique characteristics.
 - Search database to provide user with toxicity information (severity, common symptoms) as well as flower description to aide in detection confirmation.
 
 
