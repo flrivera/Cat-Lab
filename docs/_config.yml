@@ -4,6 +4,5 @@ show_downloads: true
 
 github:
   zip_url: https://share.streamlit.io/flrivera/pet-lab/main/Recog_app.py
-  tar_url: https://flrivera-my-capstone-bucket.s3.us-east-2.amazonaws.com/my_model.zip
 
 
